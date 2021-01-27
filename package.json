@@ -41,6 +41,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "fabric": "^4.3.0",
     "fabric-webpack": "^1.6.0-rc.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"

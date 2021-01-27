@@ -3,17 +3,21 @@ const autoprefixer = require("autoprefixer");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src//Hihihi/Button.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
     chunkFilename: "[id].js",
     publicPath: "",
-    library: ["testParent", "testChild", "dev"],
+    library: "dev-plugin",
     libraryTarget: "window",
   },
   resolve: {
     extensions: [".js", ".jsx"],
+  },
+  externals: {
+    lodash: "lodash",
+    fabric: "fabric",
   },
   module: {
     rules: [

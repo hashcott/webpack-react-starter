@@ -1,10 +1,10 @@
-import React from "react";
+// import "fabric-webpack";
+import { fabric } from "fabric";
 import { get } from "lodash";
 import defaultOptions from "./defaultOptions";
-import { parseSequence } from "./utils";
-import mapIcons from "./mapIcons";
+import { parseSequence } from "./utils.js";
+import mapIcons from "./mapIcons.js";
 
-const fabric = window.fabric;
 const Button = fabric.util.createClass(fabric.Group, {
   type: "button",
   superType: "button",
@@ -245,25 +245,4 @@ const Button = fabric.util.createClass(fabric.Group, {
   },
 });
 
-class Rect extends React.Component {
-  componentDidMount() {
-    const button = new Button({
-      text: "test",
-      x: 0,
-      y: 0,
-      width: 150,
-      height: 20,
-      iconName: "f555",
-      top: 0,
-      left: 0,
-    });
-
-    this.props.canvas.add(button);
-  }
-
-  render() {
-    return null;
-  }
-}
-
-export default Rect;
+export default Button;
